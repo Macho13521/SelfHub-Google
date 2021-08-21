@@ -29,7 +29,6 @@ namespace OurSelf
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.TextBox();
             this.haslo = new System.Windows.Forms.TextBox();
@@ -42,7 +41,6 @@ namespace OurSelf
             this.button2 = new System.Windows.Forms.Button();
             this.identyfikator = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,6 +53,11 @@ namespace OurSelf
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.komorka = new System.Windows.Forms.TextBox();
+            this.szukanepole = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.szukanawartosc = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.wiek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pobranywiek)).BeginInit();
             this.SuspendLayout();
@@ -135,7 +138,7 @@ namespace OurSelf
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(411, 387);
+            this.button2.Location = new System.Drawing.Point(612, 353);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 23);
             this.button2.TabIndex = 9;
@@ -145,7 +148,7 @@ namespace OurSelf
             // 
             // identyfikator
             // 
-            this.identyfikator.Location = new System.Drawing.Point(402, 341);
+            this.identyfikator.Location = new System.Drawing.Point(603, 307);
             this.identyfikator.Name = "identyfikator";
             this.identyfikator.Size = new System.Drawing.Size(169, 20);
             this.identyfikator.TabIndex = 10;
@@ -153,21 +156,16 @@ namespace OurSelf
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(368, 344);
+            this.label5.Location = new System.Drawing.Point(569, 310);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "ID";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(538, 249);
+            this.label6.Location = new System.Drawing.Point(739, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 21;
@@ -176,7 +174,7 @@ namespace OurSelf
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(535, 195);
+            this.label7.Location = new System.Drawing.Point(736, 161);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 20;
@@ -185,7 +183,7 @@ namespace OurSelf
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(535, 131);
+            this.label8.Location = new System.Drawing.Point(736, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 19;
@@ -194,7 +192,7 @@ namespace OurSelf
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(535, 65);
+            this.label9.Location = new System.Drawing.Point(736, 31);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(36, 13);
             this.label9.TabIndex = 18;
@@ -202,35 +200,35 @@ namespace OurSelf
             // 
             // pobranywiek
             // 
-            this.pobranywiek.Location = new System.Drawing.Point(603, 247);
+            this.pobranywiek.Location = new System.Drawing.Point(804, 213);
             this.pobranywiek.Name = "pobranywiek";
             this.pobranywiek.Size = new System.Drawing.Size(185, 20);
             this.pobranywiek.TabIndex = 17;
             // 
             // pobranyemail
             // 
-            this.pobranyemail.Location = new System.Drawing.Point(603, 188);
+            this.pobranyemail.Location = new System.Drawing.Point(804, 154);
             this.pobranyemail.Name = "pobranyemail";
             this.pobranyemail.Size = new System.Drawing.Size(185, 20);
             this.pobranyemail.TabIndex = 16;
             // 
             // pobranehaslo
             // 
-            this.pobranehaslo.Location = new System.Drawing.Point(603, 128);
+            this.pobranehaslo.Location = new System.Drawing.Point(804, 94);
             this.pobranehaslo.Name = "pobranehaslo";
             this.pobranehaslo.Size = new System.Drawing.Size(185, 20);
             this.pobranehaslo.TabIndex = 15;
             // 
             // pobranylogin
             // 
-            this.pobranylogin.Location = new System.Drawing.Point(603, 65);
+            this.pobranylogin.Location = new System.Drawing.Point(804, 31);
             this.pobranylogin.Name = "pobranylogin";
             this.pobranylogin.Size = new System.Drawing.Size(185, 20);
             this.pobranylogin.TabIndex = 14;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(603, 342);
+            this.button3.Location = new System.Drawing.Point(804, 308);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(160, 23);
             this.button3.TabIndex = 22;
@@ -240,7 +238,7 @@ namespace OurSelf
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(603, 387);
+            this.button4.Location = new System.Drawing.Point(804, 353);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(160, 23);
             this.button4.TabIndex = 23;
@@ -250,7 +248,7 @@ namespace OurSelf
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(383, 140);
+            this.button5.Location = new System.Drawing.Point(546, 138);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 24;
@@ -260,16 +258,63 @@ namespace OurSelf
             // 
             // komorka
             // 
-            this.komorka.Location = new System.Drawing.Point(371, 107);
+            this.komorka.Location = new System.Drawing.Point(534, 105);
             this.komorka.Name = "komorka";
             this.komorka.Size = new System.Drawing.Size(109, 20);
             this.komorka.TabIndex = 25;
+            // 
+            // szukanepole
+            // 
+            this.szukanepole.Location = new System.Drawing.Point(101, 439);
+            this.szukanepole.Name = "szukanepole";
+            this.szukanepole.Size = new System.Drawing.Size(100, 20);
+            this.szukanepole.TabIndex = 26;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(177, 483);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 27;
+            this.button6.Text = "SzukajID";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // szukanawartosc
+            // 
+            this.szukanawartosc.Location = new System.Drawing.Point(224, 439);
+            this.szukanawartosc.Name = "szukanawartosc";
+            this.szukanawartosc.Size = new System.Drawing.Size(100, 20);
+            this.szukanawartosc.TabIndex = 28;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(136, 423);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(28, 13);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Pole";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(252, 423);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Wartość";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1025, 606);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.szukanawartosc);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.szukanepole);
             this.Controls.Add(this.komorka);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -318,7 +363,6 @@ namespace OurSelf
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox identyfikator;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -331,6 +375,11 @@ namespace OurSelf
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox komorka;
+        private System.Windows.Forms.TextBox szukanepole;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox szukanawartosc;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
 

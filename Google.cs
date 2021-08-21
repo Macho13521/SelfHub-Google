@@ -82,5 +82,24 @@ namespace OurSelf
             };
             warunki.UpdateAsync(dane);
         }
+
+
+        public static async Task<string> SzukajID(string Kolekcja, string NazwaPola, dynamic WartośćPola)
+        {
+            CollectionReference kolekt = db.Collection(Kolekcja);
+            Query kwerenda = kolekt.WhereEqualTo(NazwaPola,WartośćPola);
+
+            QuerySnapshot zwrot = await kwerenda.GetSnapshotAsync();
+
+            if (zwrot.Documents.Count==1)
+            {
+                return zwrot.Documents[0].Id;
+            }
+            else
+            {
+                return "Nie ma takiego lub jest ich wiele";
+            }
+            
+        }
     }
 }

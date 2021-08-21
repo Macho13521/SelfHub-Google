@@ -75,5 +75,17 @@ namespace OurSelf
         {
             Google.UsuwaniePola("Konta", identyfikator.Text, komorka.Text);
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SzukajID();
+        }
+
+        public async Task SzukajID()
+        {
+            string ID = await Google.SzukajID("Konta", szukanepole.Text, szukanawartosc.Text);
+
+            identyfikator.Text = ID;
+        }
     }
 }

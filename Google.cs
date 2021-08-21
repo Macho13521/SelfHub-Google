@@ -27,11 +27,10 @@ namespace OurSelf
             kolekcja.AddAsync(dane);
         }
 
-        public static async Task<object> PobierzRekordAsync(string Kolekcja, string ID)
+        public static async Task<DocumentSnapshot> PobierzRekord(string Kolekcja, string ID)
         {
             DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
             DocumentSnapshot zapytanie = await warunki.GetSnapshotAsync();
-
 
             if (zapytanie.Exists)
             {
@@ -41,7 +40,18 @@ namespace OurSelf
             {
                 return null;
             }
-
         }
+        /*
+        
+        private async Task wyswietlAsync()    - przykład korzystania z funkcji pobierania danych do klass po ID -- PobierzRekord
+        {
+            DocumentSnapshot dane = await Google.PobierzRekordAsync("Konta", identyfikator.Text);
+
+            User użytkownik = dane.ConvertTo<User>();
+
+            wynik.Text = użytkownik.Wiek.ToString();
+        }
+
+        */
     }
 }

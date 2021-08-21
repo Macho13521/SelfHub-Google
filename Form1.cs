@@ -39,8 +39,16 @@ namespace OurSelf
 
         private void button2_ClickAsync(object sender, EventArgs e)
         {
-            Task<object> zwrot = Google.PobierzRekordAsync("Konta", identyfikator.Text);
+            wyswietlAsync();
+        }
 
+        private async Task wyswietlAsync()
+        {
+            DocumentSnapshot dane = await Google.PobierzRekord("Konta", identyfikator.Text);
+
+            User użytkownik = dane.ConvertTo<User>();
+
+            wynik.Text = użytkownik.Wiek.ToString();
         }
     }
 }

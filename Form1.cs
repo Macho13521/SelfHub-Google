@@ -65,5 +65,10 @@ namespace OurSelf
             };
             Google.AktualizacjaRekordu("Konta", identyfikator.Text, uzytkownik);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Google.UsuwanieRekordu("Konta", identyfikator.Text);
+        }
     }
 }

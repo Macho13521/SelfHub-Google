@@ -63,7 +63,13 @@ namespace OurSelf
             {
                 await warunki.UpdateAsync(dane);
             }
+        }
 
+
+        public static void UsuwanieRekordu(string Kolekcja, string ID)
+        {
+            DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
+            warunki.DeleteAsync();
         }
     }
 }

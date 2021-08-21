@@ -29,6 +29,7 @@ namespace OurSelf
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.TextBox();
             this.haslo = new System.Windows.Forms.TextBox();
@@ -40,11 +41,19 @@ namespace OurSelf
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.identyfikator = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label6 = new System.Windows.Forms.Label();
-            this.wynik = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pobranywiek = new System.Windows.Forms.NumericUpDown();
+            this.pobranyemail = new System.Windows.Forms.TextBox();
+            this.pobranehaslo = new System.Windows.Forms.TextBox();
+            this.pobranylogin = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.wiek)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pobranywiek)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -123,9 +132,9 @@ namespace OurSelf
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(326, 223);
+            this.button2.Location = new System.Drawing.Point(411, 387);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(144, 23);
             this.button2.TabIndex = 9;
             this.button2.Text = "Pobierz";
             this.button2.UseVisualStyleBackColor = true;
@@ -133,54 +142,114 @@ namespace OurSelf
             // 
             // identyfikator
             // 
-            this.identyfikator.Location = new System.Drawing.Point(326, 62);
+            this.identyfikator.Location = new System.Drawing.Point(402, 341);
             this.identyfikator.Name = "identyfikator";
-            this.identyfikator.Size = new System.Drawing.Size(100, 20);
+            this.identyfikator.Size = new System.Drawing.Size(169, 20);
             this.identyfikator.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(326, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(292, 65);
+            this.label5.Location = new System.Drawing.Point(368, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "ID";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(271, 110);
+            this.label6.Location = new System.Drawing.Point(538, 249);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Komórka";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "wiek:";
             // 
-            // wynik
+            // label7
             // 
-            this.wynik.AutoSize = true;
-            this.wynik.Location = new System.Drawing.Point(344, 171);
-            this.wynik.Name = "wynik";
-            this.wynik.Size = new System.Drawing.Size(37, 13);
-            this.wynik.TabIndex = 14;
-            this.wynik.Text = "Wynik";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(535, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "email:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(535, 131);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Haslo:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(535, 65);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(36, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Login:";
+            // 
+            // pobranywiek
+            // 
+            this.pobranywiek.Location = new System.Drawing.Point(603, 247);
+            this.pobranywiek.Name = "pobranywiek";
+            this.pobranywiek.Size = new System.Drawing.Size(185, 20);
+            this.pobranywiek.TabIndex = 17;
+            // 
+            // pobranyemail
+            // 
+            this.pobranyemail.Location = new System.Drawing.Point(603, 188);
+            this.pobranyemail.Name = "pobranyemail";
+            this.pobranyemail.Size = new System.Drawing.Size(185, 20);
+            this.pobranyemail.TabIndex = 16;
+            // 
+            // pobranehaslo
+            // 
+            this.pobranehaslo.Location = new System.Drawing.Point(603, 128);
+            this.pobranehaslo.Name = "pobranehaslo";
+            this.pobranehaslo.Size = new System.Drawing.Size(185, 20);
+            this.pobranehaslo.TabIndex = 15;
+            // 
+            // pobranylogin
+            // 
+            this.pobranylogin.Location = new System.Drawing.Point(603, 65);
+            this.pobranylogin.Name = "pobranylogin";
+            this.pobranylogin.Size = new System.Drawing.Size(185, 20);
+            this.pobranylogin.TabIndex = 14;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(603, 342);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(160, 23);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Aktualizuj";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.wynik);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.pobranywiek);
+            this.Controls.Add(this.pobranyemail);
+            this.Controls.Add(this.pobranehaslo);
+            this.Controls.Add(this.pobranylogin);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.identyfikator);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
@@ -196,6 +265,7 @@ namespace OurSelf
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.wiek)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pobranywiek)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,10 +284,17 @@ namespace OurSelf
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox identyfikator;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label wynik;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown pobranywiek;
+        private System.Windows.Forms.TextBox pobranyemail;
+        private System.Windows.Forms.TextBox pobranehaslo;
+        private System.Windows.Forms.TextBox pobranylogin;
+        private System.Windows.Forms.Button button3;
     }
 }
 

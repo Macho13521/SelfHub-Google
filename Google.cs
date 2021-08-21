@@ -52,5 +52,18 @@ namespace OurSelf
         }
 
         */
+
+
+        public static async Task AktualizacjaRekordu(string Kolekcja, string ID, Dictionary<string, object> dane)
+        {
+            DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
+            DocumentSnapshot Sprawdzenie = await warunki.GetSnapshotAsync();
+
+            if (Sprawdzenie.Exists)
+            {
+                await warunki.UpdateAsync(dane);
+            }
+
+        }
     }
 }

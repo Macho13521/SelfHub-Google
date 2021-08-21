@@ -48,7 +48,22 @@ namespace OurSelf
 
             User użytkownik = dane.ConvertTo<User>();
 
-            wynik.Text = użytkownik.Wiek.ToString();
+            pobranylogin.Text = użytkownik.Login.ToString();
+            pobranyemail.Text = użytkownik.Email.ToString();
+            pobranehaslo.Text = użytkownik.Haslo.ToString();
+            pobranywiek.Value = użytkownik.Wiek;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, object> uzytkownik = new Dictionary<string, object>()
+            {
+                {"Login", pobranylogin.Text},
+                {"Haslo", pobranehaslo.Text},
+                {"Email", pobranyemail.Text},
+                {"Wiek", (int)pobranywiek.Value}
+            };
+            Google.AktualizacjaRekordu("Konta", identyfikator.Text, uzytkownik);
         }
     }
 }

@@ -70,5 +70,10 @@ namespace OurSelf
         {
             Google.UsuwanieRekordu("Konta", identyfikator.Text);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Google.UsuwaniePola("Konta", identyfikator.Text, komorka.Text);
+        }
     }
 }

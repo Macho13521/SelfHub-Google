@@ -71,5 +71,16 @@ namespace OurSelf
             DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
             warunki.DeleteAsync();
         }
+
+        public static void UsuwaniePola(string Kolekcja, string ID, string Pole)
+        {
+            DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
+
+            Dictionary<string, object> dane = new Dictionary<string, object>()
+            {
+                {Pole, FieldValue.Delete}
+            };
+            warunki.UpdateAsync(dane);
+        }
     }
 }

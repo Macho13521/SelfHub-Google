@@ -76,3 +76,7 @@ C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.csproj.CopyComplet
 C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.exe
 C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.pdb
 C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.csproj.AssemblyReference.cache
+C:\Users\macho\source\repos\OurSelf\OurSelf\bin\Debug\OurSelf.exe.manifest
+C:\Users\macho\source\repos\OurSelf\OurSelf\bin\Debug\OurSelf.application
+C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.exe.manifest
+C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.application

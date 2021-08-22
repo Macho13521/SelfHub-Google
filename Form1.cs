@@ -20,16 +20,9 @@ namespace OurSelf
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_ClickAsync(object sender, EventArgs e)
         {
-            Dictionary<string, object> uzytkownik = new Dictionary<string, object>() {
-                {"Login", login.Text},
-                {"Haslo", haslo.Text},
-                {"Email", email.Text},
-                {"Wiek", (int)wiek.Value}
-            };
-            Google.DodajRekord("Konta", uzytkownik);
-            MessageBox.Show("Powodzenie");
+            UtwórzKonto();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -86,6 +79,17 @@ namespace OurSelf
             string ID = await Google.SzukajID("Konta", szukanepole.Text, szukanawartosc.Text);
 
             identyfikator.Text = ID;
+        }
+
+        public void UtwórzKonto()
+        {
+            Dictionary<string, object> uzytkownik = new Dictionary<string, object>() {
+                {"Login", login.Text},
+                {"Haslo", haslo.Text},
+                {"Email", email.Text},
+                {"Wiek", (int)wiek.Value}
+            };
+            identyfikator.Text = Google.DodajRekord("Konta", uzytkownik);
         }
     }
 }

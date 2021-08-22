@@ -19,11 +19,19 @@ namespace OurSelf
         }
 
         
-        public static void DodajRekord(string Kolekcja, Dictionary<string, object> dane)
+        public static string DodajRekord(string Kolekcja, Dictionary<string, object> dane)
         {
             CollectionReference kolekcja = db.Collection(Kolekcja);
 
-            kolekcja.AddAsync(dane);
+            try
+            {
+                string ID = kolekcja.AddAsync(dane).Result.Id;
+                return ID;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public static async Task<DocumentSnapshot> PobierzRekord(string Kolekcja, string ID)
@@ -97,7 +105,7 @@ namespace OurSelf
             }
             else
             {
-                return "Nie ma takiego lub jest ich wiele";
+                return null;
             }
             
         }

@@ -21,10 +21,9 @@ namespace OurSelf
         
         public static string DodajRekord(string Kolekcja, Dictionary<string, object> dane)
         {
-            CollectionReference kolekcja = db.Collection(Kolekcja);
-
             try
             {
+                CollectionReference kolekcja = db.Collection(Kolekcja);
                 string ID = kolekcja.AddAsync(dane).Result.Id;
                 return ID;
             }
@@ -36,14 +35,13 @@ namespace OurSelf
 
         public static async Task<DocumentSnapshot> PobierzRekord(string Kolekcja, string ID)
         {
-            DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
-            DocumentSnapshot zapytanie = await warunki.GetSnapshotAsync();
-
-            if (zapytanie.Exists)
+            try
             {
+                DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
+                DocumentSnapshot zapytanie = await warunki.GetSnapshotAsync();
                 return zapytanie;
             }
-            else
+            catch
             {
                 return null;
             }
@@ -64,50 +62,73 @@ namespace OurSelf
 
         public static async Task AktualizacjaRekordu(string Kolekcja, string ID, Dictionary<string, object> dane)
         {
-            DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
-            DocumentSnapshot Sprawdzenie = await warunki.GetSnapshotAsync();
-
-            if (Sprawdzenie.Exists)
+            try
             {
+                DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
+                DocumentSnapshot Sprawdzenie = await warunki.GetSnapshotAsync();
                 await warunki.UpdateAsync(dane);
+            }
+            catch
+            {
+
             }
         }
 
 
         public static void UsuwanieRekordu(string Kolekcja, string ID)
         {
-            DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
-            warunki.DeleteAsync();
+            try
+            {
+                DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
+                warunki.DeleteAsync();
+            }
+            catch
+            {
+
+            }
         }
 
         public static void UsuwaniePola(string Kolekcja, string ID, string Pole)
         {
-            DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
-
-            Dictionary<string, object> dane = new Dictionary<string, object>()
+            try
             {
-                {Pole, FieldValue.Delete}
-            };
-            warunki.UpdateAsync(dane);
+                DocumentReference warunki = db.Collection(Kolekcja).Document(ID);
+
+                Dictionary<string, object> dane = new Dictionary<string, object>()
+                {
+                    {Pole, FieldValue.Delete}
+                };
+                warunki.UpdateAsync(dane);
+            }
+            catch
+            {
+
+            }  
         }
 
 
         public static async Task<string> SzukajID(string Kolekcja, string NazwaPola, dynamic WartośćPola)
         {
-            CollectionReference kolekt = db.Collection(Kolekcja);
-            Query kwerenda = kolekt.WhereEqualTo(NazwaPola,WartośćPola);
-
-            QuerySnapshot zwrot = await kwerenda.GetSnapshotAsync();
-
-            if (zwrot.Documents.Count==1)
+            try
             {
-                return zwrot.Documents[0].Id;
+                CollectionReference kolekt = db.Collection(Kolekcja);
+                Query kwerenda = kolekt.WhereEqualTo(NazwaPola, WartośćPola);
+
+                QuerySnapshot zwrot = await kwerenda.GetSnapshotAsync();
+
+                if (zwrot.Documents.Count == 1)
+                {
+                    return zwrot.Documents[0].Id;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch
             {
                 return null;
             }
-            
         }
     }
 }

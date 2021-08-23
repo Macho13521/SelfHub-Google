@@ -68,7 +68,6 @@ C:\Users\macho\source\repos\OurSelf\OurSelf\bin\Debug\System.Memory.xml
 C:\Users\macho\source\repos\OurSelf\OurSelf\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\macho\source\repos\OurSelf\OurSelf\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\macho\source\repos\OurSelf\OurSelf\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.Form1.resources
 C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.Properties.Resources.resources
 C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.csproj.GenerateResource.cache
 C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.csproj.CoreCompileInputs.cache
@@ -80,3 +79,4 @@ C:\Users\macho\source\repos\OurSelf\OurSelf\bin\Debug\OurSelf.exe.manifest
 C:\Users\macho\source\repos\OurSelf\OurSelf\bin\Debug\OurSelf.application
 C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.exe.manifest
 C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.application
+C:\Users\macho\source\repos\OurSelf\OurSelf\obj\Debug\OurSelf.Logowanie.resources

@@ -12,10 +12,10 @@ using static OurSelf.szablony;
 
 namespace OurSelf
 {
-    public partial class Form1 : Form
+    public partial class Logowanie : Form
     {
         
-        public Form1()
+        public Logowanie()
         {
             InitializeComponent();
         }
@@ -37,14 +37,21 @@ namespace OurSelf
 
         private async Task wyswietlAsync()
         {
+ 
             DocumentSnapshot dane = await Google.PobierzRekord("Konta", identyfikator.Text);
-
-            User użytkownik = dane.ConvertTo<User>();
-
-            pobranylogin.Text = użytkownik.Login.ToString();
-            pobranyemail.Text = użytkownik.Email.ToString();
-            pobranehaslo.Text = użytkownik.Haslo.ToString();
-            pobranywiek.Value = użytkownik.Wiek;
+            
+            if (dane.Exists)
+            {
+                User użytkownik = dane.ConvertTo<User>();
+                pobranylogin.Text = użytkownik.Login.ToString();
+                pobranyemail.Text = użytkownik.Email.ToString();
+                pobranehaslo.Text = użytkownik.Haslo.ToString();
+                pobranywiek.Value = użytkownik.Wiek;
+            }
+            else
+            {
+                Wyswietlkomunikat("Nie ma użytkownika o takim ID");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -78,7 +85,14 @@ namespace OurSelf
         {
             string ID = await Google.SzukajID("Konta", szukanepole.Text, szukanawartosc.Text);
 
-            identyfikator.Text = ID;
+            if (ID != null)
+            {
+                identyfikator.Text = ID;
+            }
+            else
+            {
+                Wyswietlkomunikat("Niema rekordu o takiej wartości");
+            }
         }
 
         public void UtwórzKonto()
@@ -90,6 +104,11 @@ namespace OurSelf
                 {"Wiek", (int)wiek.Value}
             };
             identyfikator.Text = Google.DodajRekord("Konta", uzytkownik);
+        }
+
+        public static void Wyswietlkomunikat(string komunikat)
+        {
+            MessageBox.Show(komunikat);
         }
     }
 }

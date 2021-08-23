@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using static OurSelf.Logowanie;
 
 namespace OurSelf
 {
@@ -18,6 +19,41 @@ namespace OurSelf
             db = FirestoreDb.Create("selfhub");
         }
 
+
+        public static void Komunikat(int nr)
+        {
+            string komunikat="";
+            switch (nr)
+            {
+                case 1:
+                    komunikat = "Dodawanie rekordu zakończone niepowodzeniem";
+                    break;
+                case 2:
+                    komunikat = "Pobieranie rekordu zakończone niepowodzeniem";
+                    break;
+                case 3:
+                    komunikat = "Aktualizacja rekordu zakończona niepowodzeniem";
+                    break;
+                case 4:
+                    komunikat = "Usuwanie rekordu zakończone niepowodzeniem";
+                    break;
+                case 5:
+                    komunikat = "Usuwanie pola zakończone niepowodzeniem";
+                    break;
+                case 6:
+                    komunikat = "Szukanie ID zakończone niepowodzeniem";
+                    break;
+            }
+            try
+            {
+                Logowanie.Wyswietlkomunikat(komunikat);
+            }
+            catch
+            {
+                Logowanie.Wyswietlkomunikat("Błąd orzetwarzania komunikatów");
+            }
+        }
+
         
         public static string DodajRekord(string Kolekcja, Dictionary<string, object> dane)
         {
@@ -29,6 +65,7 @@ namespace OurSelf
             }
             catch
             {
+                Komunikat(1);
                 return null;
             }
         }
@@ -43,6 +80,7 @@ namespace OurSelf
             }
             catch
             {
+                Komunikat(2);
                 return null;
             }
         }
@@ -70,7 +108,7 @@ namespace OurSelf
             }
             catch
             {
-
+                Komunikat(3);
             }
         }
 
@@ -84,7 +122,7 @@ namespace OurSelf
             }
             catch
             {
-
+                Komunikat(4);
             }
         }
 
@@ -102,7 +140,7 @@ namespace OurSelf
             }
             catch
             {
-
+                Komunikat(5);
             }  
         }
 
@@ -127,6 +165,7 @@ namespace OurSelf
             }
             catch
             {
+                Komunikat(6);
                 return null;
             }
         }

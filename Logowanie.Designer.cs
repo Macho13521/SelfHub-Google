@@ -1,7 +1,7 @@
 ﻿
 namespace OurSelf
 {
-    partial class Form1
+    partial class Logowanie
     {
         /// <summary>
         /// Wymagana zmienna projektanta.

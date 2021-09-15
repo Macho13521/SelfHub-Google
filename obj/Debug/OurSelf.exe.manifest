@@ -258,14 +258,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OurSelf.exe" size="23520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OurSelf.exe" size="24032">
       <assemblyIdentity name="OurSelf" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SRa5WTGhGIBNfIAQjTxqZxkfu9/rLNhDoWfc+2h/2Zk=</dsig:DigestValue>
+        <dsig:DigestValue>CoetjbbAsuqqWxJT0PDamb/OMyq/1GRwerUSKbVq4Uo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

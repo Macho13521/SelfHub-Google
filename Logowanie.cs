@@ -28,6 +28,21 @@ namespace OurSelf
         private void Form1_Load(object sender, EventArgs e)
         {
             Google.Connect();
+
+            Google SkryptGoogle = new Google();
+
+            DocumentReference docRef = Google.db.Collection("Konta").Document("d3yO0QwdvIc9tdl472J8");//nasłuchiwanie zmian
+            FirestoreChangeListener listener = docRef.Listen(snapshot =>
+            {
+                MessageBox.Show("Aktualizacja Zmian");//ta funkcja się wywołuje po zmianach
+            });
+
+            listener.StopAsync();//wyłączenie nasłuchiwania
+        }
+
+        private void SkryptGoogle_Synchronizacja(object o, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void button2_ClickAsync(object sender, EventArgs e)

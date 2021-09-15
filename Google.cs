@@ -8,7 +8,7 @@ namespace OurSelf
 {
     public class Google
     {
-        static FirestoreDb db;
+        public static FirestoreDb db;
 
 
         public static void Connect()
@@ -16,7 +16,7 @@ namespace OurSelf
             string path = AppDomain.CurrentDomain.BaseDirectory + @"selfhub.json";
             Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", path);
 
-            db = FirestoreDb.Create("selfhub");
+            db = FirestoreDb.Create("selfhub"); 
         }
 
 

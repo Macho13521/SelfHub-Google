@@ -169,5 +169,37 @@ namespace OurSelf
                 return null;
             }
         }
+
+        public async Task<List<List<dynamic>>> PobierzRekordy(string Kolekcja, string Pole, string WartośćPola)
+        {
+            Query capitalQuery = db.Collection(Kolekcja).WhereEqualTo(Pole, WartośćPola);
+            QuerySnapshot capitalQuerySnapshot = await capitalQuery.GetSnapshotAsync();
+
+            List<List<dynamic>> Rekordy = new List<List<dynamic>>();
+            List<dynamic> Rekord = new List<dynamic>();
+
+            foreach (DocumentSnapshot documentSnapshot in capitalQuerySnapshot.Documents)
+            {
+                Rekord.Clear();
+                Console.WriteLine("Document data for {0} document:", documentSnapshot.Id);
+                Dictionary<string, object> city = documentSnapshot.ToDictionary();
+                foreach (KeyValuePair<string, object> pair in city)
+                {
+                    Rekord.Add(pair.Value);
+                }
+                Rekordy.Add(Rekord);
+            }
+
+            if (Rekordy.Count > 0)
+            {
+                return Rekordy;
+            }
+            else
+            {
+                return null;
+            }
+
+            
+        }
     }
 }

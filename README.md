@@ -1,2 +1,2 @@
 # OurSelf
- Komunikator oparty o sztuczną inteligencję oraz bazę wiedzy która asystuje przy komunikacji.
+TEST Połączenia z Firebase

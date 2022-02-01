@@ -58,6 +58,12 @@ namespace OurSelf
             this.szukanawartosc = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.szukanyciag = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.pole2 = new System.Windows.Forms.TextBox();
+            this.znalezionyciag = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.wiek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pobranywiek)).BeginInit();
             this.SuspendLayout();
@@ -305,11 +311,68 @@ namespace OurSelf
             this.label11.TabIndex = 30;
             this.label11.Text = "Wartość";
             // 
-            // Form1
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(539, 470);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 13);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Wartość";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(423, 470);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(28, 13);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Pole";
+            // 
+            // szukanyciag
+            // 
+            this.szukanyciag.Location = new System.Drawing.Point(511, 486);
+            this.szukanyciag.Name = "szukanyciag";
+            this.szukanyciag.Size = new System.Drawing.Size(100, 20);
+            this.szukanyciag.TabIndex = 33;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(458, 460);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 32;
+            this.button7.Text = "Znajdź";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // pole2
+            // 
+            this.pole2.Location = new System.Drawing.Point(388, 486);
+            this.pole2.Name = "pole2";
+            this.pole2.Size = new System.Drawing.Size(100, 20);
+            this.pole2.TabIndex = 31;
+            // 
+            // znalezionyciag
+            // 
+            this.znalezionyciag.AutoSize = true;
+            this.znalezionyciag.Location = new System.Drawing.Point(460, 518);
+            this.znalezionyciag.Name = "znalezionyciag";
+            this.znalezionyciag.Size = new System.Drawing.Size(73, 13);
+            this.znalezionyciag.TabIndex = 36;
+            this.znalezionyciag.Text = "ID Znalezione";
+            // 
+            // Logowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 606);
+            this.Controls.Add(this.znalezionyciag);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.szukanyciag);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.pole2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.szukanawartosc);
@@ -339,7 +402,7 @@ namespace OurSelf
             this.Controls.Add(this.haslo);
             this.Controls.Add(this.login);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "Logowanie";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.wiek)).EndInit();
@@ -380,6 +443,12 @@ namespace OurSelf
         private System.Windows.Forms.TextBox szukanawartosc;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox szukanyciag;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox pole2;
+        private System.Windows.Forms.Label znalezionyciag;
     }
 }
 

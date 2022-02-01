@@ -201,5 +201,30 @@ namespace OurSelf
 
             
         }
+
+        public static async Task<string> SzukajCiąguAsync(string Kolekcja,string pole, string wartośćszukana)
+        {
+            try
+            {
+                CollectionReference kolekt = db.Collection(Kolekcja);
+                Query kwerenda = kolekt.WhereEqualTo(pole, wartośćszukana+"~");
+
+                QuerySnapshot zwrot = await kwerenda.GetSnapshotAsync();
+
+                if (zwrot.Documents.Count == 1)
+                {
+                    return zwrot.Documents[0].Id;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                Komunikat(6);
+                return null;
+            }
+        }
     }
 }

@@ -125,5 +125,16 @@ namespace OurSelf
         {
             MessageBox.Show(komunikat);
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            SzukajFrazyAsync();
+        }
+
+        private async Task SzukajFrazyAsync()
+        {
+            string ID = await Google.SzukajCiąguAsync("Konta",pole2.Text, szukanyciag.Text);
+            znalezionyciag.Text = ID;   
+        }
     }
 }
